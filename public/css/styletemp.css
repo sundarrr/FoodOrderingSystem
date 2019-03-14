@@ -1,0 +1,114 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Homepage.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slide 50s infinite;
+   
+}
+@keyframes slide{
+    25%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(1.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        filter: alpha(opacity=60);
+    }
+    50%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(2.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        filter: alpha(opacity=60);
+    }
+    75%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(3.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        filter: alpha(opacity=60);
+    }
+    100%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Homepage.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        filter: alpha(opacity=60);
+    }
+}
+
+.btn-group button 
+{
+  margin-top: 25px;
+  background: none; /* Green background */
+  border: 1px grey; /* Green border */
+  color: aliceblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  color: #fff;
+  border: 1.5px solid white;
+}
+
+.logo img
+{
+    
+    width: 120px;
+    height: auto;
+    float: left;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+
+body
+{
+    font-family:'Palatino Linotype', 'Book Antiqua', "Palatino", serif;
+;
+}
+
+.row
+{
+    max-width:1050px;
+    margin: auto;
+}
+
+.hero
+{
+    position: absolute;
+    width: 1500px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+h1
+{
+    color:beige;
+    text-transform: uppercase;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 275px;
+}
