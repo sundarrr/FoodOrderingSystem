@@ -1,46 +1,46 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');//888
 var crypto = require('crypto'); 
+const algorithm = 'aes-256-cbc';
+var password = 'd6F3Efeq';
 var passportlocalmongoose=require("passport-local-mongoose");
 var usercredentialsSchema = new mongoose.Schema({
    username:{
-        type: String
+        type: String,
 
     },
     email:{
-        type:String
+        type:String,
 
     },
-    hash : String, 
-    salt : String ,
+    password:String,
     phonenumber:{
-type:Number
+type:Number,
     }
 });
 usercredentialsSchema.plugin(passportlocalmongoose);
-usercredentialsSchema.methods.setPassword = function(password) { 
-     
-    // creating a unique salt for a particularusercredentials 
-       this.salt = crypto.randomBytes(16).toString('hex'); 
-     
-       // hashingusercredentials's salt and password with 1000 iterations, 
-       this.hash = crypto.pbkdf2Sync(password, this.salt,  
-       1000, 64, `sha512`).toString(`hex`); 
-   }; 
-
-  usercredentialsSchema.methods.validPassword = function(password) { 
-    var hash = crypto.pbkdf2Sync(password,this.salt, 1000, 64, `sha512`).toString(`hex`); 
-    return this.hash === hash; 
-}; 
-
+usercredentialsSchema.methods.enc=function encrypt(text){
+    var cipher = crypto.createCipher(algorithm,password)
+    var crypted = cipher.update(text,'utf8','hex')
+    crypted += cipher.final('hex');
+    return crypted;
+  };
+   
+   usercredentialsSchema.methods.dec=   function decrypt(text) {  
+       var decipher = crypto.createDecipher(algorithm,password)
+    var dec = decipher.update(text,'hex','utf8')
+    dec += decipher.final('utf8');
+    return dec;
+  };
 usercredentialsSchema.path('email').validate((val) => {
     emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(val);
 }, 'Invalid e-mail.');
 //password must contain Minimum eight characters, at least one letter and one number:
-/*usercredentialsSchema.path('password').validate((val) => {
+usercredentialsSchema.path('password').validate((val) => {
+    console.log('password validation');
     passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     return passwordRegex.test(val);
-}, 'Your Password must follow the rule');*/
+}, 'Your Password must follow the rule');
 usercredentialsSchema.path('phonenumber').validate((val) => {
     pnumberRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
     return pnumberRegex.test(val);
