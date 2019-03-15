@@ -22,6 +22,7 @@ router.get('/login', (req,res)=>{
     console.log('login  poiduchu'),
     res.render("home/login");
 });
+var c = new register();    
 const check = require('../models/User.model');
 router.post('/login', urlencodedParser, function(req, res){
     check.findOne({username: req.body.username }, function(err, user) { 
@@ -31,13 +32,14 @@ router.post('/login', urlencodedParser, function(req, res){
            }); 
         } 
         else { 
-            if (user.validPassword(req.body.password)) { 
+            if (c.dec(user.password)==req.body.password) {                
                 return res.redirect('/home');
+                
             } 
             else { 
-                return res.status(400).send({ 
-                    message : "Wrong Password"
-                }); 
+                return res.render("home/login", {
+                    user: req.body
+                });
             } 
         } 
     }); 
@@ -46,7 +48,11 @@ function insertRecord(req, res) {
     var user = new register();
     user.username = req.body.username;
     user.email = req.body.email;
-    user.setPassword(req.body.password); 
+    //user.setPassword(req.body.password);
+    user.password=user.enc(req.body.password);
+    var tt=user.enc(req.body.password);
+   console.log(user.enc(req.body.password));
+   console.log(user.dec(tt));
   //  user.cpassword = req.body.cpassword;
     user.phonenumber = req.body.phonenumber;
     user.save((err, doc) => {
@@ -76,6 +82,7 @@ function handleValidationError(err,body){
                 break;
             case 'password':
                 body['PasswordError']=err.errors[field].message;
+                console.log('pass block executed');
                 break;
             case 'cpassword':
                 body['CPasswordError']=err.errors[field].message;
