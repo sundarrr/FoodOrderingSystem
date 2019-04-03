@@ -1,0 +1,165 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(review.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: aliceblue;
+}
+h1 {
+    font-size: 30px; 
+    color: #445668; 
+    text-transform: uppercase;
+    text-align: center; 
+    margin: 0 0 35px 0; 
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+.box1{
+    position: absolute;
+    top: 55%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+}
+.box1 input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box1 input[type = "submit"]:hover{
+    border-color: #FFFF66;
+    background: #FFFF66;
+}
+.box{
+    position: absolute;
+    top: 35%;
+    left: 50%; 
+    transform: translate(-50%,-50%) rotateY(180deg);
+    display: flex;
+}
+h1{
+    position: absolute;
+    top: 20%;
+    left: 36.9%; 
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box input
+{
+    display: none;
+}
+.box label
+{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+}
+.box label:before
+{
+    content: '\f005';
+    font-family: fontawesome;
+    position: relative;
+    display: block;
+    font-size: 50px;
+    color: azure;
+}
+.box label:after
+{
+    content: '\f005';
+    font-family: fontawesome;
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color: yellow;
+    top:0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.box label:hover:after,
+.box input:hover ~ label:after,
+.box input:checked ~ label:after
+{
+    opacity: 1;
+}
+
+
+
+.btn-group button 
+{
+  margin-top: 25px;
+  background: none; /* Green background */
+  border: 1px grey; /* Green border */
+  color: aliceblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.btn-group label
+{ 
+  margin-top: 25px;
+  background: none; /* Green background */
+  border: 1px grey; /* Green border */
+  color: aliceblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.btn-group label:not(:last-child)
+{
+    border-right: none;
+}
+
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  color: #fff;
+  border: 1.5px solid white;
+}
+
+.logo img
+{
+    
+    width: 120px;
+    height: auto;
+    float: left;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+.row
+{
+    max-width:1050px;
+    margin: auto;
+}

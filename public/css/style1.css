@@ -73,3 +73,69 @@ border-color:#2ecc71;
     background:#2ecc71;
 }
 
+
+
+.btn-group button 
+{
+  margin-top: 25px;
+  background: none; /* Green background */
+  border: 1px grey; /* Green border */
+  color: aliceblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.btn-group label
+{ 
+  margin-top: 25px;
+  background: none; /* Green background */
+  border: 1px grey; /* Green border */
+  color: aliceblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.btn-group label:not(:last-child)
+{
+    border-right: none;
+}
+
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  color: #fff;
+  border: 1.5px solid white;
+}
+
+.logo img
+{
+    
+    width: 120px;
+    height: auto;
+    float: left;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+.row
+{
+    max-width:1050px;
+    margin: auto;
+}
+

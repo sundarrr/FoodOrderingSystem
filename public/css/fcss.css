@@ -1,0 +1,149 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+   
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li a
+{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+}
+
+.main-nav li a:hover
+{
+    border: 2px solid white;
+    color: white;
+    
+}
+
+.logo img
+{
+    width: 120px;
+    height: auto;
+    float: left;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+body
+{
+    font-family:'Palatino Linotype', 'Book Antiqua', "Palatino", serif;
+;
+}
+.ro
+{
+    max-width:1100px;
+    margin: auto;
+}
+.first
+{
+    color:beige;
+    margin-left: 520px;
+    margin-top: 50px;
+}
+.second{
+    color:beige;
+    margin-left: 620px;
+    margin-top: 50px;
+}
+
+.st{
+    margin-left: 1150px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.mod{
+    margin-top: 5px;
+}
+.third{
+    color:beige;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+.card {
+    height:370px;
+    overflow:auto;
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: -4px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
