@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Hotel Ordering System</title>
+         <link rel="stylesheet" href="../css/sig.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="logo">
+            <img src="../images/logo.jpg" alt="Logo">
+        </div>
+           <div class="btn-group" style="width:100%">
+                <a href="/home/home"></a><button style="width:12%">HOME</button>
+                <a href="/home/order"></a><button style="width:12%">ORDER</button>
+                <a href="/home/menu"></a><button style="width:12%">MENU</button>
+                <a href="/home/reviews"></a><button style="width:12%">REVIEWS</button>
+                <a href="/home/login"><button style="width:12%">SIGN IN</button></a>
+                <a href="/home/SignUp"><button style="width:12%">SIGN UP</button></a>
+                <a href="/home/contact"></a><button style="width:12%">CONTACT</button>
+            </div>
+        </div>
+    <form class="box" action="/home/SignUp" method="post" autocomplete="off">
+        <h1>Sign Up</h1>
+        <input type="text" name="username" placeholder="Username" >
+        <input type="email" name="email" placeholder="Email" >
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="cpassword" placeholder="Confirm Password">
+        <input type="number" name="phonenumber" placeholder="Phone Number">
+        <input type="submit" placeholder="Login">
+    </form>
+    </body>
+</html>
