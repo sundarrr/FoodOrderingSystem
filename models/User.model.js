@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');//888
-var crypto = require('crypto'); 
+var crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
 var password = 'd6F3Efeq';
 var passportlocalmongoose=require("passport-local-mongoose");
@@ -16,6 +16,11 @@ var usercredentialsSchema = new mongoose.Schema({
     phonenumber:{
 type:Number,
     }
+});
+var rateSchema = new mongoose.Schema({
+    Date: Date,
+    star: {type: String, possibleValues: ["very poor","poor","average","good","very good"]},
+    comment: String
 });
 usercredentialsSchema.plugin(passportlocalmongoose);
 usercredentialsSchema.methods.enc=function encrypt(text){
@@ -48,3 +53,5 @@ usercredentialsSchema.path('phonenumber').validate((val) => {
 
 User= mongoose.model('User',usercredentialsSchema);
 module.exports = User;
+Rate= mongoose.model('Rate',rateSchema);
+module.exports = Rate;
