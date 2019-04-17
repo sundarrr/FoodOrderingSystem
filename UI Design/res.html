@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Reservation</title>
+        <link rel="stylesheet" href="res_css.css">
+    </head>
+        <body>
+        <div class="row">
+            <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+           <div class="btn-group" style="width:100%">
+                                <button style="width:12%" onClick ="location.href='index.html'">HOME</button>
+                <button style="width:12%" onClick ="location.href='res.html'">ORDER</button>
+                <button style="width:12%" onClick ="location.href='food.html'">MENU</button>
+                <button style="width:12%" onClick ="location.href='revout.html'">REVIEWS</button>
+                <button style="width:12%" onClick ="location.href='contact.html'">CONTACT</button>
+                <button style="width:12%" onClick ="location.href='index.html'">Logout</button>
+                <label for="Welcome">Welcome</label>
+            </div>
+        </div>
+        <form class="box" action="food.html" method="post">
+            <h1>Reservation</h1>
+            <label for="date">Booking date:</label><input type="date" name="date" min="24-03-2019">        
+            <label for="numberOfGuest">Number of Guests:</label><input type="number" name="numberOfGuests" min="1" max="8">   
+             <p>Do you require meals?</p>
+            <label for="yesMeals">Yes:</label><input id="yesMeals" type="radio" name="meals" value="yesMeals">
+            <label for="noMeals">No:</label><input id="noMeals" type="radio" name="meals" value="noMeals">
+            <br>
+            
+             <p>Meal Preference</p>
+            <label for="Breakfast">Breakfast:</label><input id="Breakfast" type="radio" name="supper"   value="Breakfast">
+            <label for="Lunch">Lunch:</label><input id="Lunch" type="radio" name="supper" value="Lunch">
+            <label for="Dinner">Dinner:</label><input id="Breakfast" type="radio" name="supper" value="Dinner">
+            <br>
+            <br>
+            <label for="balcony">Do you require a balcony?</label>
+            <input id="balcony" type="checkbox" name="balcony" value="yes" checked>
+            <br>
+            
+            <input type="submit" name="" value="Submit">
+        </form>
+        </body>
+</html>

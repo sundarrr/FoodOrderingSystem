@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    Food Ordering
+    </title>
+<link rel="stylesheet" href="fcss.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+    <div class="ro">
+            <div class="logo">
+            <img src="logo.jpg" alt="logo">
+            </div>
+        <ul class="main-nav">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li class="oyi"><a href="res.html">ORDER YOUR ITEM</a></li>
+            <li class="menu"><a href="food.html">MENU</a></li>
+            <li class="reviews"><a href="revout.html">REVIEWS</a></li>
+            <li class="contact"><a href="contact.html">CONTACT</a></li>
+            <li class="logout"><a href="index.html">LOG OUT</a></li>
+            <li style="color: azure;">Welcome</li>
+        </ul>
+        </div>        <br><br>
+            <div >
+            <h1 class="text-white second">
+            Starters
+            </h1></div>
+            <button type="button" class="btn btn-success btn-md st" data-toggle="modal" data-target="#myModal">PROCEED <em class="fa fa-arrow-circle-right"></em></button>            
+            
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Cart</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5 col-md-3">
+              <h5 class="text-success">Sample Food 1:</h5>
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <h5 class="text-dark">2</h5>
+          </div>
+            <div class="col-lg-3 col-md-3">
+              <h5 class="text-dark">120</h5>
+          </div>
+            <div class="col-lg-1 col-md-3">
+              <button type="button" class = "btn btn-success btn-md"><i class="fa fa-times" aria-hidden="true"></i></button>
+                
+          </div>
+          </div>
+       <div class="row mod">
+          <div class="col-lg-5 col-md-3">
+              <h5 class="text-success">Sample Food 2:</h5>
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <h5 class="text-dark">4</h5>
+          </div>
+            <div class="col-lg-3 col-md-3">
+              <h5 class="text-dark">200</h5>
+          </div>
+            <div class="col-lg-1 col-md-3">
+              <button type="button" class = "btn btn-success btn-md"><i class="fa fa-times" aria-hidden="true"></i></button>
+                
+          </div>
+          </div>
+       
+          
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" onClick="location.href='rate.html'">Continue</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container">
+    
+<div class="row">
+  <div class="col-lg-3 col-md-3">
+      
+  <div class="card">
+    <div class="card-body">
+        <br>
+ <img src="french.jpg" alt="" class="img-center img-fluid rounded-circle w-50 mb-3 text-center"  style="margin-left: auto; margin-right: auto;  display: block; width: 50%;">
+    
+      <h3 class="text-center text-success">French Fries</h3>
+        <div class="d-flex flex-row justify-content-center">
+          
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Price:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-dark">50</h5>
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Qty:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <input type="number" style="width: 50px;">
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-3 col-md-3">
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <input type="button" style="width: 100px;" value="Add to Cart" class="btn btn-success btn-sm btn-block">
+          </div>
+            <div class="col-lg-3 col-md-3">
+          </div>
+              <div class="col-lg-3 col-md-3">
+          </div>
+          </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="card ">
+      <div class="card-body">
+          <br>
+          <img src="paneer.jpg" alt="" class="img-center img-fluid rounded-circle w-50 mb-3 text-center"  style="margin-left: auto; margin-right: auto;  display: block; width: 50%;">
+          <br>
+        <h3 class="text-center text-success">Paneer 65</h3>
+        <div class="d-flex flex-row justify-content-center">
+        </div>
+          <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Price:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-dark">60</h5>
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Qty:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <input type="number" style="width: 50px;">
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-3 col-md-3">
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <input type="button" style="width: 100px;" value="Add to Cart" class="btn btn-success btn-sm btn-block">
+          </div>
+            <div class="col-lg-3 col-md-3">
+          </div>
+              <div class="col-lg-3 col-md-3">
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="card ">
+        <br>
+      <div class="card-body"><img src="start.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3 "  style="margin-left: auto; margin-right: auto;  display: block;">
+          <br>
+        <h3 class="text-center text-success">Gobi 65</h3>
+        <div class="d-flex flex-row justify-content-center">
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Price:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-dark">60</h5>
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Qty:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <input type="number" style="width: 50px;">
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-3 col-md-3">
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <input type="button" style="width: 100px;" value="Add to Cart" class="btn btn-success btn-sm btn-block">
+          </div>
+            <div class="col-lg-3 col-md-3">
+          </div>
+              <div class="col-lg-3 col-md-3">
+          </div>
+          </div>  
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-body">
+          <br>
+        <img src="tomato.jpg" alt="" class="img-center img-fluid rounded-circle w-50 mb-3 text-center"  style="margin-left: auto; margin-right: auto;  display: block; width: 100%; margin-top: -10px;">
+        <h3 class="text-center text-success">Tomato Soup</h3>
+        <div class="d-flex flex-row justify-content-center">
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Price:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-dark">70</h5>
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-6 col-md-3">
+              <h5 class="text-success">Qty:</h5>
+              </div>
+          <div class="col-lg-6 col-md-3">
+              <input type="number" style="width: 50px;">
+          </div>  
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-lg-3 col-md-3">
+              </div>
+          <div class="col-lg-3 col-md-3">
+              <input type="button" style="width: 100px;" value="Add to Cart" class="btn btn-success btn-sm btn-block">
+          </div>
+            <div class="col-lg-3 col-md-3">
+          </div>
+              <div class="col-lg-3 col-md-3">
+          </div>
+          </div>  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+            
+<button type="button" class="btn btn-success btn-lg st"style="margin-top: 10px;" onClick ="location.href='main.html'">Main Course <em class="fa fa-arrow-circle-right"></em></button>                 
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src ="js/bootstrap.min.js"></script>
+<script src="js/navbar-fixed.js"></script>
+           
+            </header>
+    </body>
+</html>

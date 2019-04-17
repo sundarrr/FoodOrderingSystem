@@ -1,0 +1,8 @@
+Hotel2-2bbcf2c00b56b13c798bbead4a97e2508a997f44
+
+Hotel3-d99cdf62ad3b12f5cd2ebaca84e228a8b047d872
+
+ "sprint2": 6dc9f646c352a2aa9498634b70e6abcbc539b8f7
+	
+
+sonar-scanner.bat -D"sonar.projectKey=Sprint" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=94d41de1446a336fd94195d9c52b1ae9b41e2730"
